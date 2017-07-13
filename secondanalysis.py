@@ -32,11 +32,11 @@ for idx, child in enumerate(root.findall('Product')):
             eur = SupplyDetail.findall('Price')[1].find('PriceAmount').text
             if gbp1 > float(eur):
                 ft = Font(color=colors.RED)
-                ws['F' + str(idx)] = "GBP"
+                ws['F' + str(idx)] = "EUR"
                 a1 = ws['F' + str(idx)]
                 a1.font = ft
             else:
-                ws['F' + str(idx)] = "EUR"
+                ws['F' + str(idx)] = "GBP"
         elif CurrencyCode == 'EUR':
             eur = price.find('PriceAmount').text
             print("EUR :: ", eur)

@@ -31,4 +31,4 @@ for idx, child in enumerate(root.findall('Product')):
             print("EUR :: ", eur)
             ws['D' + str(idx)] = eur
 
-wb.save("one.xml")
+wb.save("one.xlsx")
